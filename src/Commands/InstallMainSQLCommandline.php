@@ -10,7 +10,7 @@ use Tualo\Office\Basic\PostCheck;
 
 class InstallMainSQLCommandline implements ICommandline{
 
-    public static function getCommandName():string { return 'install-sql-fibuconv';}
+    public static function getCommandName():string { return 'install-sql-erp';}
 
     public static function setup(Cli $cli){
         $cli->command(self::getCommandName())
@@ -78,9 +78,26 @@ class InstallMainSQLCommandline implements ICommandline{
             'install/zahlungsschluessel'    => 'setup zahlungsschluessel',
             'install/zahlungsschluessel.ds'    => 'setup zahlungsschluessel.ds',
 
+            'install/warenhauptgruppen'    => 'setup warenhauptgruppen',
+            'install/warenhauptgruppen.ds'    => 'setup warenhauptgruppen.ds',
+
+            'install/warengruppen'    => 'setup warengruppen',
+            'install/warengruppen.ds'    => 'setup warengruppen.ds',
+
+            'install/lager'    => 'setup lager',
+            'install/lager.ds'    => 'setup lager.ds',
+
+            'install/preisorientierung'    => 'setup preisorientierung',
+            'install/preisorientierung.ds'    => 'setup preisorientierung.ds',
+
+            'install/buchungskonten'    => 'setup buchungskonten',
+            'install/buchungskonten.ds'    => 'setup buchungskonten.ds',
+
             'install/adressen'    => 'setup adressen',
             'install/adressen.ds'    => 'setup adressen.ds',
 
+            'install/proc.recalculateHeader'    => 'setup recalculateHeader',
+            
 
             // immer zum schluss
             'install/ds_fill'    => 'refreshing ds data',

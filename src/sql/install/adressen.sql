@@ -105,6 +105,31 @@ CREATE TABLE IF NOT EXISTS `adressen` (
   CONSTRAINT `fk_booking_circle` FOREIGN KEY (`booking_circle`) REFERENCES `booking_circle` (`id`)
 ) COMMENT='Kundenstamm';
 
+CREATE VIEW IF not exists `view_readtable_adressen` AS
+select
+    `adressen`.*,
+    trim(
+        concat(
+            ifnull(`adressen`.`name`, ''),
+            ' ',
+            ifnull(`adressen`.`firma`, ''),
+            ' ',
+            ifnull(`adressen`.`vorname`, ''),
+            ' ',
+            ifnull(`adressen`.`nachname`, '')
+        )
+    ) AS `_shortname`,
+    concat(
+        ifnull(`adressen`.`name`, ''),
+        ' ',
+        ifnull(`adressen`.`firma`, ''),
+        ' ',
+        ifnull(`adressen`.`nachname`, ''),
+        ' #',
+        ifnull(`adressen`.`kundennummer`, '')
+    ) AS `anzeigen_name`
+from
+    `adressen`;
 
 
 DELIMITER ;
