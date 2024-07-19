@@ -45,6 +45,7 @@ class InstallMainSQLCommandline implements ICommandline{
 
         $files = [
             
+            'install/ds_class'    => 'setup ds_class',
             'install/booking_circle'    => 'setup booking_circle',
             'install/booking_circle.ds'    => 'setup booking_circle.ds',
 
