@@ -15,7 +15,6 @@ class Tables  extends PostCheck {
             'adressen'=>[],
             'booking_circle'=>[],
             'buchungskonten'=>[],
-            'ds_fill'=>[],
             'einspeiserkennzeichen'=>[],
             'geschaeftsstatus'=>[],
             'kundenbetreuer'=>[],

@@ -99,9 +99,9 @@ class InstallMainSQLCommandline implements ICommandline{
 
             'install/proc.recalculateHeader'    => 'setup recalculateHeader',
             
-
+            'install/proc.addForeignKeyIfNotExists'    => 'setup addForeignKeyIfNotExists',
             // immer zum schluss
-            'install/ds_fill'    => 'refreshing ds data',
+            'install/fill_ds'    => 'refreshing ds data',
 
         ];
         
