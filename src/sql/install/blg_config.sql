@@ -41,4 +41,4 @@ CREATE TABLE IF NOT EXISTS `blg_config` (
   KEY `fk_blg_config_transitlager` (`transitlager`),
   CONSTRAINT `fk_blg_config_preisorientierung` FOREIGN KEY (`preisorientierung`) REFERENCES `preisorientierung` (`name`) ON UPDATE CASCADE,
   CONSTRAINT `fk_blg_config_transitlager` FOREIGN KEY (`transitlager`) REFERENCES `lager` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ;
