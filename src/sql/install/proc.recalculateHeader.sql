@@ -1,5 +1,5 @@
 delimiter //
-CREATE OR REPLACE PROCEDURE `recalculateHeader`(IN tabellenzusatz varchar(50),  IN in_reportnumber bigint)
+CREATE  PROCEDURE if not exists `recalculateHeader`(IN tabellenzusatz varchar(50),  IN in_reportnumber bigint)
     MODIFIES SQL DATA
 BEGIN
 
