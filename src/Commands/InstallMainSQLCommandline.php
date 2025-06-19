@@ -101,6 +101,10 @@ class InstallMainSQLCommandline implements ICommandline
             'install/buchungskonten'    => 'setup buchungskonten',
             'install/buchungskonten.ds'    => 'setup buchungskonten.ds',
 
+            'install/buchungskreise'    => 'setup buchungskreise',
+            'install/buchungskreise.ds'    => 'setup buchungskreise.ds',
+
+
             'install/adressen'    => 'setup adressen',
             'install/adressen.ds'    => 'setup adressen.ds',
 
