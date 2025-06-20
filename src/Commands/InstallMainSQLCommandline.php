@@ -56,10 +56,13 @@ class InstallMainSQLCommandline implements ICommandline
     
             'install/booking_circle'    => 'setup booking_circle',
             'install/booking_circle.ds'    => 'setup booking_circle.ds',
-    
-            
+
+                        
             'install/vertriebsregion'    => 'setup vertriebsregion',
             'install/vertriebsregion.ds'    => 'setup vertriebsregion.ds',
+            
+            'install/mengeneinheiten'    => 'setup mengeneinheiten',
+            'install/mengeneinheiten.ds'    => 'setup mengeneinheiten.ds',
 
             'install/geschaeftsstatus'    => 'setup geschaeftsstatus',
             'install/geschaeftsstatus.ds'    => 'setup geschaeftsstatus.ds',
@@ -103,12 +106,24 @@ class InstallMainSQLCommandline implements ICommandline
             'install/buchungskonten'    => 'setup buchungskonten',
             'install/buchungskonten.ds'    => 'setup buchungskonten.ds',
 
+            'install/bfkonten'    => 'setup bfkonten',
+            'install/bfkonten.ds'    => 'setup bfkonten.ds',
+
+            'install/bfkonten_zuordnung'    => 'setup bfkonten_zuordnung',
+            'install/bfkonten_zuordnung.ds'    => 'setup bfkonten_zuordnung.ds',
+
+
             'install/buchungskreise'    => 'setup buchungskreise',
             'install/buchungskreise.ds'    => 'setup buchungskreise.ds',
 
+            'install/artikelgruppen'    => 'setup artikelgruppen',
+            'install/artikelgruppen.ds'    => 'setup artikelgruppen.ds',
 
             'install/adressen'    => 'setup adressen',
             'install/adressen.ds'    => 'setup adressen.ds',
+
+            'install/staffeln'    => 'setup staffeln',
+            'install/staffeln.ds'    => 'setup staffeln.ds',
 
             'install/proc.recalculateHeader'    => 'setup recalculateHeader',
 
