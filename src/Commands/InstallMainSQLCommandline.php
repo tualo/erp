@@ -53,11 +53,13 @@ class InstallMainSQLCommandline implements ICommandline
         $files = [
 
             'install/ds_class'    => 'setup ds_class',
+    
             'install/booking_circle'    => 'setup booking_circle',
             'install/booking_circle.ds'    => 'setup booking_circle.ds',
-
-            'install/einspeiserkennzeichen'    => 'setup einspeiserkennzeichen',
-            'install/einspeiserkennzeichen.ds'    => 'setup einspeiserkennzeichen.ds',
+    
+            
+            'install/vertriebsregion'    => 'setup vertriebsregion',
+            'install/vertriebsregion.ds'    => 'setup vertriebsregion.ds',
 
             'install/geschaeftsstatus'    => 'setup geschaeftsstatus',
             'install/geschaeftsstatus.ds'    => 'setup geschaeftsstatus.ds',
