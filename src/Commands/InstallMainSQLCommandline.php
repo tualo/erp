@@ -125,6 +125,24 @@ class InstallMainSQLCommandline implements ICommandline
             'install/staffeln'    => 'setup staffeln',
             'install/staffeln.ds'    => 'setup staffeln.ds',
 
+            'install/geschaeftsstellen_logins'    => 'setup geschaeftsstellen_logins',
+            'install/geschaeftsstellen_logins.ds'    => 'setup geschaeftsstellen_logins.ds',
+
+            'install/brieffusstextspalten'    => 'setup brieffusstextspalten',
+            'install/brieffusstextspalten.ds'    => 'setup brieffusstextspalten.ds',
+
+            'install/brieffusstext'    => 'setup brieffusstext',
+            'install/brieffusstext.ds'    => 'setup brieffusstext.ds',
+
+            'install/blg_artikel'    => 'setup blg_artikel',
+            'install/blg_artikel.ds'    => 'setup blg_artikel.ds',
+
+            'install/buchungskreise_logins'    => 'setup buchungskreise_logins',
+
+            'install/hauptkassenbuecher'    => 'setup hauptkassenbuecher',
+            
+            'install/kassenterminals'    => 'setup kassenterminals',  
+
             'install/proc.recalculateHeader'    => 'setup recalculateHeader',
 
             'install/proc.addForeignKeyIfNotExists'    => 'setup addForeignKeyIfNotExists',
