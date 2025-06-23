@@ -146,8 +146,8 @@ class InstallMainSQLCommandline implements ICommandline
 
             'install/hauptkassenbuecher'    => 'setup hauptkassenbuecher',
             
-            'install/kassenterminals'    => 'setup kassenterminals',  
-
+            'install/kassenterminals'    => 'setup kassenterminals',
+            'install/kassenterminals.ds'    => 'setup kassenterminals.ds',
             'install/proc.recalculateHeader'    => 'setup recalculateHeader',
 
             'install/proc.addForeignKeyIfNotExists'    => 'setup addForeignKeyIfNotExists',
