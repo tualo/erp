@@ -125,6 +125,11 @@ class InstallMainSQLCommandline implements ICommandline
             'install/staffeln'    => 'setup staffeln',
             'install/staffeln.ds'    => 'setup staffeln.ds',
 
+            'install/geschaeftsstellen'    => 'setup geschaeftsstellen',
+            'install/geschaeftsstellen.ds'    => 'setup geschaeftsstellen.ds',
+
+
+
             'install/geschaeftsstellen_logins'    => 'setup geschaeftsstellen_logins',
             'install/geschaeftsstellen_logins.ds'    => 'setup geschaeftsstellen_logins.ds',
 
