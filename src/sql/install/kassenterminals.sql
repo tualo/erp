@@ -1,5 +1,5 @@
 DELIMITER;
-
+/* OLD VERSION
 CREATE TABLE IF NOT EXISTS `kassenterminals` (
   `id` varchar(36) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -17,6 +17,30 @@ CREATE TABLE IF NOT EXISTS `kassenterminals` (
   CONSTRAINT `fk_kassenterminal_hauptkassenbuecher` FOREIGN KEY (`kasse`) REFERENCES `hauptkassenbuecher` (`id`) ON UPDATE CASCADE,
   CONSTRAINT `fk_kassenterminal_lager` FOREIGN KEY (`lager`) REFERENCES `lager` (`id`) ON UPDATE CASCADE
 );
+*/
+
+CREATE TABLE IF NOT EXISTS `kassenterminals` (
+  `id` varchar(36) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `kasse` int(11) NOT NULL,
+  `lager` int(11) NOT NULL,
+  `beleg` int(11) NOT NULL,
+  `wgfilter` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT '{}',
+  `productlist` int(11) DEFAULT 19,
+  `adminpin` varchar(10) DEFAULT 'adminPIN',
+  `servicepin` varchar(100) DEFAULT '1234567890',
+  `bon_header` longtext DEFAULT '\BonKopf GmbH\nBonKopf Strasse 44\n12345 Bonburg\n-------------\nSt.Nr. 212/123/00456\nHRB 1234\n',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uidx_kassenterminals_name` (`name`),
+  KEY `fk_kassenterminal_hauptkassenbuecher` (`kasse`),
+  KEY `fk_kassenterminal_lager` (`lager`),
+  KEY `fk_kassenterminal_beleg` (`beleg`),
+  CONSTRAINT `fk_kassenterminal_beleg` FOREIGN KEY (`beleg`) REFERENCES `blg_config` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `fk_kassenterminal_hauptkassenbuecher` FOREIGN KEY (`kasse`) REFERENCES `hauptkassenbuecher` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `fk_kassenterminal_lager` FOREIGN KEY (`lager`) REFERENCES `lager` (`id`) ON UPDATE CASCADE
+);
+
+
 
 CREATE OR REPLACE VIEW `view_readtable_kassenterminals` AS
 select
