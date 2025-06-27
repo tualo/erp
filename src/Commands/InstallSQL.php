@@ -10,7 +10,7 @@ use Tualo\Office\ExtJSCompiler\Helper;
 use Tualo\Office\Basic\TualoApplication as App;
 use Tualo\Office\Basic\PostCheck;
 
-class InstallMainSQLCommandline implements ICommandline
+class InstallSQL implements ICommandline
 {
 
     public static function getCommandName(): string
@@ -21,7 +21,7 @@ class InstallMainSQLCommandline implements ICommandline
     public static function setup(Cli $cli)
     {
         $cli->command(self::getCommandName())
-            ->description('installs needed sql for fibuconv module')
+            ->description('installs needed sql for erp module')
             ->opt('client', 'only use this client', true, 'string');
     }
 

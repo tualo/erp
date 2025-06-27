@@ -40,6 +40,16 @@ CREATE TABLE IF NOT EXISTS `kassenterminals` (
   CONSTRAINT `fk_kassenterminal_lager` FOREIGN KEY (`lager`) REFERENCES `lager` (`id`) ON UPDATE CASCADE
 );
 
+
+
+create table if not exists  kassenterminals_client_id (
+  kassenterminal varchar(36) primary key,
+  tss_client_id varchar(36) not null,
+  constraint `fk_kassenterminals_client_id`
+  foreign key (kassenterminal)
+  references kassenterminals(id)
+);
+
 /*
 insert into kassenterminals
 (id, name, kasse, lager, beleg, wgfilter, productlist, adminpin, servicepin)
