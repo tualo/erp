@@ -112,8 +112,6 @@ class InstallMainSQLCommandline implements ICommandline
             'install/bfkonten'    => 'setup bfkonten',
             'install/bfkonten.ds'    => 'setup bfkonten.ds',
 
-            'install/bfkonten_zuordnung'    => 'setup bfkonten_zuordnung',
-            'install/bfkonten_zuordnung.ds'    => 'setup bfkonten_zuordnung.ds',
 
 
             'install/buchungskreise'    => 'setup buchungskreise',
@@ -121,6 +119,10 @@ class InstallMainSQLCommandline implements ICommandline
 
             'install/artikelgruppen'    => 'setup artikelgruppen',
             'install/artikelgruppen.ds'    => 'setup artikelgruppen.ds',
+
+            'install/bfkonten_zuordnung'    => 'setup bfkonten_zuordnung',
+            'install/bfkonten_zuordnung.ds'    => 'setup bfkonten_zuordnung.ds',
+
 
             'install/adressen'    => 'setup adressen',
             'install/adressen.ds'    => 'setup adressen.ds',
