@@ -40,11 +40,12 @@ CREATE TABLE IF NOT EXISTS `kassenterminals` (
   CONSTRAINT `fk_kassenterminal_lager` FOREIGN KEY (`lager`) REFERENCES `lager` (`id`) ON UPDATE CASCADE
 );
 
+/*
 insert into kassenterminals
 (id, name, kasse, lager, beleg, wgfilter, productlist, adminpin, servicepin)
 values
 (, 'Kassenterminal 1', 1, 1, 1, '{}', 19, 'adminPIN', '1234567890'),
-
+*/
 
 CREATE OR REPLACE VIEW `view_readtable_kassenterminals` AS
 select
