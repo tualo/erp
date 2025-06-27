@@ -1,6 +1,6 @@
 <?php
 
-namespace Tualo\Office\Report\Commands;
+namespace Tualo\Office\ERP\Commands;
 
 use Garden\Cli\Cli;
 use Garden\Cli\Args;
