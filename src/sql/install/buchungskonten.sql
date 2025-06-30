@@ -6,7 +6,9 @@ CREATE TABLE IF NOT EXISTS `buchungskonten` (
     `aktiv` tinyint(4) DEFAULT 1,
     PRIMARY KEY (`konto`)
 );
-
+ALTER TABLE `buchungskonten` 
+    ADD COLUMN IF NOT EXISTS `name` varchar(255) DEFAULT NULL;
+    
 CREATE OR REPLACE VIEW `view_readtable_buchungskonten` AS
 select
     `buchungskonten`.`konto` AS `konto`,

@@ -50,6 +50,27 @@ create table if not exists  kassenterminals_client_id (
   references kassenterminals(id)
 );
 
+alter table kassenterminals_client_id
+  add column if not exists last_tx_read datetime not null default '1970-01-01 00:00:00';
+
+alter table kassenterminals_client_id
+  add column if not exists tss varchar(36) default null ;
+
+create index if not exists `idx_kassenterminals_client_id` on kassenterminals_client_id (kassenterminal, tss_client_id);
+
+create table if not exists kassenterminals_client_id_tx (
+  tss varchar(36) not null,
+  id varchar(36) not null,
+  tx_id varchar(36) not null,
+  primary key (tss, id,tx_id),
+  val json not null,
+  key `idx_kassenterminals_client_id_tx` (`tss`, `id`),
+  constraint `fk_kassenterminals_client_id_tx`
+  foreign key (tss, id)
+  references kassenterminals_client_id(kassenterminal, tss_client_id)
+  on delete restrict on update restrict
+);
+
 /*
 insert into kassenterminals
 (id, name, kasse, lager, beleg, wgfilter, productlist, adminpin, servicepin)

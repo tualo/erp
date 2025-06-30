@@ -105,6 +105,8 @@ CREATE TABLE IF NOT EXISTS `adressen` (
   CONSTRAINT `fk_booking_circle` FOREIGN KEY (`booking_circle`) REFERENCES `booking_circle` (`id`)
 ) COMMENT='Kundenstamm';
 
+alter table `adressen` add column `firma` NOT NULL DEFAULT '';
+
 CREATE VIEW IF not exists `view_readtable_adressen` AS
 select
     `adressen`.*,

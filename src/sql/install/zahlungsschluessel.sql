@@ -6,11 +6,11 @@ CREATE TABLE IF NOT EXISTS `zahlungsschluessel` (
   `skonto` int(11) NOT NULL DEFAULT 0,
   `skontotage` int(11) NOT NULL DEFAULT 0,
   `alternativtage` int(11) NOT NULL DEFAULT 0,
-  `codx_schluessel` varchar(100) DEFAULT NULL,
+
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_zbt_t_s` (`tage`,`skonto`,`skontotage`)
 )
 COMMENT='Erlaubte Zahlweisen.';
 
-insert ignore into `zahlungsschluessel` (`id`, `beschreibung`, `tage`, `skonto`, `skontotage`, `alternativtage`, `codx_schluessel`) 
-values ('1', '30 Tage netto', 30, 0, 0, 0, '30T');
+insert ignore into `zahlungsschluessel` (`id`, `beschreibung`, `tage`, `skonto`, `skontotage`, `alternativtage`) 
+values ('1', '30 Tage netto', 30, 0, 0, 0);

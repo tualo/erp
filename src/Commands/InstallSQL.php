@@ -120,6 +120,8 @@ class InstallSQL implements ICommandline
             'install/artikelgruppen'    => 'setup artikelgruppen',
             'install/artikelgruppen.ds'    => 'setup artikelgruppen.ds',
 
+            'install/kombiartikel'    => 'setup kombiartikel',
+
             'install/bfkonten_zuordnung'    => 'setup bfkonten_zuordnung',
             'install/bfkonten_zuordnung.ds'    => 'setup bfkonten_zuordnung.ds',
 
