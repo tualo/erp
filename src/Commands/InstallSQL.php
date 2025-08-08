@@ -163,6 +163,59 @@ class InstallSQL implements ICommandline
             // immer zum schluss
             'install/fill_ds'    => 'refreshing ds data',
 
+
+            'install/ds/adressen.ds'    => 'dataset setup adressen.ds',
+            'install/ds/artikelgruppen.ds'    => 'dataset setup artikelgruppen.ds',
+            'install/ds/bfkonten.ds'    => 'dataset setup bfkonten.ds',
+            'install/ds/bfkonten_steuersatz.ds'    => 'dataset setup bfkonten_steuersatz.ds',
+            'install/ds/bfkonten_zuordnung.ds'    => 'dataset setup bfkonten_zuordnung.ds',
+            'install/ds/booking_circle.ds'    => 'dataset setup booking_circle.ds',
+            'install/ds/blg_artikel.ds'    => 'dataset setup blg_artikel.ds',
+            'install/ds/geschaeftsstatus.ds'    => 'dataset setup geschaeftsstatus.ds',
+
+            'install/ds/geschaeftsstellen.ds'    => 'dataset setup geschaeftsstellen.ds',
+            'install/ds/geschaeftsstellen_logins.ds'    => 'dataset setup geschaeftsstellen_logins.ds',
+
+            'install/ds/hauptkassenbuecher.ds'    => 'dataset setup hauptkassenbuecher.ds',
+            'install/ds/kassenterminals.ds'    => 'dataset setup kassenterminals.ds',
+            'install/ds/kundenbetreuer.ds'    => 'dataset setup kundenbetreuer.ds',
+            'install/ds/lager.ds'    => 'dataset setup lager.ds',
+            'install/ds/mengeneinheiten.ds'    => 'dataset setup mengeneinheiten.ds',
+            'install/ds/preiskategorien.ds'    => 'dataset setup preiskategorien.ds',
+            'install/ds/preisorientierung.ds'    => 'dataset setup preisorientierung.ds',
+            'install/ds/rechnungsdruck.ds'    => 'dataset setup rechnungsdruck.ds',
+            'install/ds/rechnungslegung.ds'    => 'dataset setup rechnungslegung.ds',
+            'install/ds/staffeln.ds'    => 'dataset setup staffeln.ds',
+            'install/ds/steuergruppen.ds'    => 'dataset setup steuergruppen.ds',
+            'install/ds/steuergruppen_field.ds'    => 'dataset setup steuergruppen_field.ds',
+            'install/ds/vertragsarten.ds'    => 'dataset setup vertragsarten.ds',
+            'install/ds/vertriebsregion.ds'    => 'dataset setup vertriebsregion.ds',
+            'install/ds/warengruppen.ds'    => 'dataset setup warengruppen.ds',
+            'install/ds/warenhauptgruppen.ds'    => 'dataset setup warenhauptgruppen.ds',
+            'install/ds/zahlungsarten.ds'    => 'dataset setup zahlungsarten.ds',
+            'install/ds/zahlungsschluessel.ds'    => 'dataset setup zahlungsschluessel.ds',
+            'install/ds/warengruppen.ds'    => 'dataset setup warengruppen.ds',
+
+            'install/ds/buchungskonten.ds'    => 'dataset setup buchungskonten.ds',
+            'install/ds/buchungskreise.ds'    => 'dataset setup buchungskreise.ds',
+
+            //'install/ds/kombiartikel.ds'    => 'dataset setup kombiartikel.ds',
+
+
+            /*
+            adressen.ds.sql                 einspeiserkennzeichen.ds.sql    rechnungsdruck.ds.sql
+artikelgruppen.ds.sql           geschaeftsstatus.ds.sql         rechnungslegung.ds.sql
+bfkonten_steuersatz.ds.sql      geschaeftsstellen_logins.ds.sql staffeln.ds.sql
+bfkonten_zuordnung.ds.sql       geschaeftsstellen.ds.sql        steuergruppen_field.ds.sql
+bfkonten.ds.sql                 hauptkassenbuecher.ds.sql       steuergruppen.ds.sql
+blg_artikel.ds.sql              kassenterminals.ds.sql          vertragsarten.ds.sql
+booking_circle.ds.sql           kundenbetreuer.ds.sql           vertriebsregion.ds.sql
+brieffusstext.ds.sql            lager.ds.sql                    warengruppen.ds.sql
+brieffusstextspalten.ds.sql     mengeneinheiten.ds.sql          warenhauptgruppen.ds.sql
+buchungskonten.ds.sql           preiskategorien.ds.sql          zahlungsarten.ds.sql
+buchungskreise.ds.sql           preisorientierung.ds.sql        zahlungsschluessel.ds.sql
+*/
+
         ];
 
 

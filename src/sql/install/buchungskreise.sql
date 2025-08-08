@@ -9,4 +9,3 @@ CREATE TABLE IF NOT EXISTS `buchungskreise` (
   `firmen_ort` varchar(100) DEFAULT '',
   PRIMARY KEY (`id`)
 ) ;
-insert ignore into buchungskreise (id,name) values ('0000','Standard');
