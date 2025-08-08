@@ -40,6 +40,12 @@ CREATE TABLE IF NOT EXISTS `kassenterminals` (
   CONSTRAINT `fk_kassenterminal_lager` FOREIGN KEY (`lager`) REFERENCES `lager` (`id`) ON UPDATE CASCADE
 );
 
+alter table kassenterminals
+  add column if not exists productlist tinyint(4) default 0,
+  add column if not exists adminpin varchar(10) default 'adminPIN',
+  add column if not exists servicepin varchar(100) default '1234567890',
+  add column if not exists wgfilter longtext character set utf8mb4 collate utf8mb4_bin default '{}',
+  add column if not exists bon_header longtext default '';
 
 
 create table if not exists  kassenterminals_client_id (

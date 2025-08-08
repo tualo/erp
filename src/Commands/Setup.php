@@ -4,16 +4,26 @@ namespace Tualo\Office\ERP\Commands;
 
 use Garden\Cli\Cli;
 use Garden\Cli\Args;
-use phpseclib3\Math\BigInteger\Engines\PHP;
-use Tualo\Office\Basic\ISetupCommandline;
-use Tualo\Office\ExtJSCompiler\Helper;
-use Tualo\Office\Basic\TualoApplication as App;
 use Tualo\Office\Basic\PostCheck;
-use Tualo\Office\Basic\CommandLineInstallSessionSQL;
-use Tualo\Office\Basic\BaseSetupCommand as BaseSetup;
+use Tualo\Office\DS\Commandline\Setup as BaseSetup;
 
-class Setup extends BaseSetup implements ISetupCommandline
+class Setup extends BaseSetup
 {
+
+
+    public static function getHeadLine(): string
+    {
+        return 'ERP Setup Command';
+    }
+    public static function getCommands(Args $args): array
+    {
+        $parentCommands = parent::getCommands($args);
+        return [
+            ...$parentCommands,
+
+            'install-sql-erp'
+        ];
+    }
 
     public static function getCommandName(): string
     {
@@ -28,36 +38,6 @@ class Setup extends BaseSetup implements ISetupCommandline
         $cli->command(self::getCommandName())
             ->description(self::getCommandDescription())
             ->opt('client', 'only use this client', true, 'string');
-    }
-    public static function run(Args $args)
-    {
-        $clientName = $args->getOpt('client');
-        if (is_null($clientName)) $clientName = '';
-
-        PostCheck::formatPrintLn(['blue'], "Installing all needed SQL procedures for report module");
-        PostCheck::formatPrintLn(['blue'], "==========================================================");
-
-
-        $installCommands = [
-            'install-sessionsql-bsc-main',
-            'install-sql-sessionviews',
-            'install-sql-bsc-main-ds',
-            'install-sql-bsc-menu',
-            'install-sql-ds-main',
-            'install-sql-ds',
-            'install-sql-ds-dsx',
-            'install-sql-ds-privacy',
-            'install-sql-ds-docsystem',
-            'install-sql-tualojs',
-            'install-sql-monaco',
-            'install-sql-dashboard',
-            'install-sql-bootstrap',
-            'install-sql-erp'
-            // 'compile'
-        ];
-
-        foreach ($installCommands as $cmdString) {
-            self::performInstall($cmdString, $clientName);
-        }
+        // ->opt('user', 'only use this user', true, 'string');
     }
 }

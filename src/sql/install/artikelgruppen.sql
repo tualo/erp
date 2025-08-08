@@ -1,4 +1,4 @@
-DELEIMITER;
+DELIMITER ;
 CREATE TABLE IF NOT EXISTS `artikelgruppen` (
   `gruppen_id` int(11) NOT NULL,
   `gruppe` varchar(255) NOT NULL,
@@ -33,17 +33,10 @@ CREATE TABLE IF NOT EXISTS `artikelgruppen` (
   `kundennummer` varchar(255) DEFAULT NULL,
   `kostenstelle` int(11) DEFAULT 0,
   `konto_id` int(11) DEFAULT 0,
-  `sartikelnummer` varchar(255) DEFAULT NULL,
   `innenauftrag_suffix` varchar(4) DEFAULT '0000',
   `zielregion` varchar(20) DEFAULT 'Verbundgebiet',
   `upoc` varchar(20) DEFAULT NULL,
 
-  `avgpreis_1` decimal(15,5) DEFAULT 0.00000,
-  `anzahl_1` decimal(15,5) DEFAULT 0.00000,
-  `avgpreis_6` decimal(15,5) DEFAULT 0.00000,
-  `anzahl_6` decimal(15,5) DEFAULT 0.00000,
-  `avgpreis_12` decimal(15,5) DEFAULT 0.00000,
-  `anzahl_12` decimal(15,5) DEFAULT 0.00000,
 
   PRIMARY KEY (`gruppen_id`),
   UNIQUE KEY `uidx_artikelgruppen_gruppe` (`gruppe`),
