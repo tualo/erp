@@ -20,7 +20,7 @@ class Setup extends BaseSetup
         $parentCommands = parent::getCommands($args);
         return [
             ...$parentCommands,
-
+            'install-sql-tualojs',
             'install-sql-erp'
         ];
     }

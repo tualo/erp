@@ -55,107 +55,71 @@ class InstallSQL implements ICommandline
             'install/ds_class'    => 'setup ds_class',
 
             'install/booking_circle'    => 'setup booking_circle',
-            'install/booking_circle.ds'    => 'setup booking_circle.ds',
 
             'install/einspeiserkennzeichen'    => 'setup einspeiserkennzeichen',
-            'install/einspeiserkennzeichen.ds'    => 'setup einspeiserkennzeichen.ds',
 
 
             'install/vertriebsregion'    => 'setup vertriebsregion',
-            'install/vertriebsregion.ds'    => 'setup vertriebsregion.ds',
 
             'install/mengeneinheiten'    => 'setup mengeneinheiten',
-            'install/mengeneinheiten.ds'    => 'setup mengeneinheiten.ds',
 
             'install/geschaeftsstatus'    => 'setup geschaeftsstatus',
-            'install/geschaeftsstatus.ds'    => 'setup geschaeftsstatus.ds',
 
             'install/kundenbetreuer'    => 'setup kundenbetreuer',
-            'install/kundenbetreuer.ds'    => 'setup kundenbetreuer.ds',
 
             'install/preiskategorien'    => 'setup preiskategorien',
-            'install/preiskategorien.ds'    => 'setup preiskategorien.ds',
 
             'install/rechnungsdruck'    => 'setup rechnungsdruck',
-            'install/rechnungsdruck.ds'    => 'setup rechnungsdruck.ds',
 
             'install/rechnungslegung'    => 'setup rechnungslegung',
-            'install/rechnungslegung.ds'    => 'setup rechnungslegung.ds',
 
             'install/steuergruppen'    => 'setup steuergruppen',
-            'install/steuergruppen.ds'    => 'setup steuergruppen.ds',
 
             'install/vertragsarten'    => 'setup vertragsarten',
-            'install/vertragsarten.ds'    => 'setup vertragsarten.ds',
 
             'install/zahlungsarten'    => 'setup zahlungsarten',
-            'install/zahlungsarten.ds'    => 'setup zahlungsarten.ds',
 
             'install/zahlungsschluessel'    => 'setup zahlungsschluessel',
-            'install/zahlungsschluessel.ds'    => 'setup zahlungsschluessel.ds',
 
             'install/warenhauptgruppen'    => 'setup warenhauptgruppen',
-            'install/warenhauptgruppen.ds'    => 'setup warenhauptgruppen.ds',
 
             'install/warengruppen'    => 'setup warengruppen',
-            'install/warengruppen.ds'    => 'setup warengruppen.ds',
 
             'install/lager'    => 'setup lager',
-            'install/lager.ds'    => 'setup lager.ds',
 
             'install/preisorientierung'    => 'setup preisorientierung',
-            'install/preisorientierung.ds'    => 'setup preisorientierung.ds',
 
             'install/buchungskonten'    => 'setup buchungskonten',
-            'install/buchungskonten.ds'    => 'setup buchungskonten.ds',
 
             'install/bfkonten'    => 'setup bfkonten',
-            'install/bfkonten.ds'    => 'setup bfkonten.ds',
-
-
 
             'install/buchungskreise'    => 'setup buchungskreise',
-            'install/buchungskreise.ds'    => 'setup buchungskreise.ds',
 
             'install/artikelgruppen'    => 'setup artikelgruppen',
-            'install/artikelgruppen.ds'    => 'setup artikelgruppen.ds',
 
             'install/kombiartikel'    => 'setup kombiartikel',
 
             'install/bfkonten_zuordnung'    => 'setup bfkonten_zuordnung',
-            'install/bfkonten_zuordnung.ds'    => 'setup bfkonten_zuordnung.ds',
-
 
             'install/adressen'    => 'setup adressen',
-            'install/adressen.ds'    => 'setup adressen.ds',
 
             'install/staffeln'    => 'setup staffeln',
-            'install/staffeln.ds'    => 'setup staffeln.ds',
 
             'install/geschaeftsstellen'    => 'setup geschaeftsstellen',
-            'install/geschaeftsstellen.ds'    => 'setup geschaeftsstellen.ds',
-
-
 
             'install/geschaeftsstellen_logins'    => 'setup geschaeftsstellen_logins',
-            'install/geschaeftsstellen_logins.ds'    => 'setup geschaeftsstellen_logins.ds',
 
             'install/brieffusstextspalten'    => 'setup brieffusstextspalten',
-            'install/brieffusstextspalten.ds'    => 'setup brieffusstextspalten.ds',
 
             'install/brieffusstext'    => 'setup brieffusstext',
-            'install/brieffusstext.ds'    => 'setup brieffusstext.ds',
 
             'install/blg_artikel'    => 'setup blg_artikel',
-            'install/blg_artikel.ds'    => 'setup blg_artikel.ds',
 
             'install/buchungskreise_logins'    => 'setup buchungskreise_logins',
 
             'install/hauptkassenbuecher'    => 'setup hauptkassenbuecher',
-            'install/hauptkassenbuecher.ds'    => 'setup hauptkassenbuecher.ds',
 
             'install/kassenterminals'    => 'setup kassenterminals',
-            'install/kassenterminals.ds'    => 'setup kassenterminals.ds',
 
             'install/proc.recalculateHeader'    => 'setup recalculateHeader',
 
@@ -171,6 +135,7 @@ class InstallSQL implements ICommandline
             'install/ds/bfkonten_zuordnung.ds'    => 'dataset setup bfkonten_zuordnung.ds',
             'install/ds/booking_circle.ds'    => 'dataset setup booking_circle.ds',
             'install/ds/blg_artikel.ds'    => 'dataset setup blg_artikel.ds',
+            'install/ds/blg_config.ds'    => 'dataset setup blg_config.ds',
             'install/ds/geschaeftsstatus.ds'    => 'dataset setup geschaeftsstatus.ds',
 
             'install/ds/geschaeftsstellen.ds'    => 'dataset setup geschaeftsstellen.ds',
