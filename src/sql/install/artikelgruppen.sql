@@ -41,6 +41,16 @@ CREATE TABLE IF NOT EXISTS `artikelgruppen` (
     CONSTRAINT `fk_artikelgruppen_warengruppe` FOREIGN KEY (`warengruppe`) REFERENCES `warengruppen` (`id`) ON UPDATE CASCADE
 );
 
+alter table artikelgruppen add if not exists `bemerkung` varchar(255) default null;
+alter table artikelgruppen add if not exists `konto_id`  int(11) NOT NULL DEFAULT 0;
+alter table artikelgruppen add if not exists   `login` varchar(255) DEFAULT NULL;
+alter table artikelgruppen add if not exists   `max_anzahl` int(11) DEFAULT 999999;
+alter table artikelgruppen add if not exists   `max_weight` decimal(15,6) DEFAULT 99999.000000;
+alter table artikelgruppen add if not exists   `max_height` decimal(15,6) DEFAULT 99999.000000;
+alter table artikelgruppen add if not exists   `max_length` decimal(15,6) DEFAULT 99999.000000;
+alter table artikelgruppen add if not exists   `max_thickness` decimal(15,6) DEFAULT 99999.000000;
+
+
 
 delimiter //
 CREATE OR REPLACE TRIGGER `artikelgruppen_setup_defaults_ai` 

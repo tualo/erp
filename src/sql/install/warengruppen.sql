@@ -11,4 +11,5 @@ CREATE TABLE IF NOT EXISTS `warengruppen` (
   KEY `idx_warenhauptgruppe` (`warenhauptgruppe`),
   CONSTRAINT `fk_waregruppen_warenhauptgruppe` FOREIGN KEY (`warenhauptgruppe`) REFERENCES `warenhauptgruppen` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
 );
+alter table warengruppen add if not exists  `warenhauptgruppe` int(11) NOT NULL DEFAULT 0;
 
