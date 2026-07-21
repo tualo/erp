@@ -159,7 +159,7 @@ class InstallSQL implements ICommandline
             'install/ds/warenhauptgruppen.ds'    => 'dataset setup warenhauptgruppen.ds',
             'install/ds/zahlungsarten.ds'    => 'dataset setup zahlungsarten.ds',
             'install/ds/zahlungsschluessel.ds'    => 'dataset setup zahlungsschluessel.ds',
-            'install/ds/warengruppen.ds'    => 'dataset setup warengruppen.ds',
+            // 'install/ds/warengruppen.ds'    => 'dataset setup warengruppen.ds',
 
             'install/ds/buchungskonten.ds'    => 'dataset setup buchungskonten.ds',
             'install/ds/buchungskreise.ds'    => 'dataset setup buchungskreise.ds',
