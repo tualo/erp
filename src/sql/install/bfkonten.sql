@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS `bfkonten` (
   PRIMARY KEY (`id`)
 );
 
+
+/*
 CREATE TABLE IF NOT EXISTS `bfkonten_steuersatz` (
   `id` int(11) NOT NULL,
 
@@ -25,6 +27,24 @@ CREATE TABLE IF NOT EXISTS `bfkonten_steuersatz` (
   CONSTRAINT `fk_bfkonten_steuersatz_konto` FOREIGN KEY (`konto`) REFERENCES `buchungskonten` (`konto`) ON DELETE RESTRICT ON UPDATE CASCADE
 
 );
+*/
+
+CREATE TABLE `bfkonten_steuersatz` (
+  `id` int(11) NOT NULL,
+  `steuergruppen` varchar(25) NOT NULL,
+  `gueltig_von` date NOT NULL DEFAULT '2000-01-01',
+  `gueltig_bis` date NOT NULL DEFAULT '2099-12-31',
+  `konto` varchar(100) NOT NULL,
+  `steuer` decimal(15,2) NOT NULL DEFAULT 0.00,
+  `sap_schluessel` varchar(5) NOT NULL DEFAULT 'A',
+  PRIMARY KEY (`id`,`gueltig_von`,`steuergruppen`),
+  KEY `idx_bfkonten_steuersatz_bfkonten` (`id`),
+  KEY `idx_bfkonten_steuersatz_konto` (`konto`),
+  KEY `fk_bfkonten_steuersatz_steuergruppen` (`steuergruppen`),
+  CONSTRAINT `fk_bfkonten_steuersatz_bfkonten` FOREIGN KEY (`id`) REFERENCES `bfkonten` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `fk_bfkonten_steuersatz_konto` FOREIGN KEY (`konto`) REFERENCES `buchungskonten` (`konto`) ON UPDATE CASCADE,
+  CONSTRAINT `fk_bfkonten_steuersatz_steuergruppen` FOREIGN KEY (`steuergruppen`) REFERENCES `steuergruppen` (`steuergruppe`) ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 
 
 /*
