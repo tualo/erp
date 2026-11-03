@@ -9,9 +9,8 @@ BEGIN
     DECLARE use_s fixed(15,6);
     DECLARE use_n fixed(15,6);
     DECLARE use_b fixed(15,6);
-    
 
-    SET @SQL = concat('
+        SET @SQL = concat('
         SELECT 
             round(sum(steuer),2) s,
             round(sum(netto),2) n,
@@ -26,21 +25,19 @@ BEGIN
             beleg = ?
     ');
 
-
-
     PREPARE stmt FROM @SQL;
     execute stmt using in_reportnumber;
     DEALLOCATE PREPARE stmt;
 
     SET @SQL = concat('UPDATE 
-        blg_hdr_',tabellenzusatz,'
-    SET 
-        netto = ?,
-        brutto = ?,
-        steuer = ?-?,
-        offen = ? - ifnull( (select sum(betrag) from ( select betrag from blg_pay_',tabellenzusatz,' where belegnummer=? union all select betrag from blg_min_',tabellenzusatz,' where belegnummer=? ) x ), 0)
-    WHERE
-        id = ?
+            blg_hdr_',tabellenzusatz,'
+        SET 
+            netto = ?,
+            brutto = ?,
+            steuer = ?-?,
+            offen = ? - ifnull( (select sum(betrag) from ( select betrag from blg_pay_',tabellenzusatz,' where belegnummer=? union all select betrag from blg_min_',tabellenzusatz,' where belegnummer=? ) x ), 0)
+        WHERE
+            id = ?
     '); 
 
     PREPARE stmt FROM @SQL;

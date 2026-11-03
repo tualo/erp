@@ -7,4 +7,7 @@ CREATE TABLE IF NOT EXISTS `mengeneinheiten` (
   PRIMARY KEY (`id`)
 );
 
-INSERT IGNORE INTO mengeneinheiten (id, name, symbol, faktor) values (1, 'STK', 'Stk.', 1.000000);
+alter table  mengeneinheiten add column if not exists code varchar(5) default '';
+
+call fill_ds_column('mengeneinheiten');
+INSERT IGNORE INTO mengeneinheiten (id, name, symbol, faktor, code) values (1, 'STK', 'Stk.', 1.000000, 'STK','H84');
