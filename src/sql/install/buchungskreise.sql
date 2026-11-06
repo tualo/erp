@@ -9,3 +9,12 @@ CREATE TABLE IF NOT EXISTS `buchungskreise` (
   `firmen_ort` varchar(100) DEFAULT '',
   PRIMARY KEY (`id`)
 ) ;
+
+
+alter table buchungskreise add if not exists iban varchar(35) default '';
+alter table buchungskreise add if not exists electronic_scheme varchar(10);
+alter table buchungskreise add if not exists electronic_address varchar(255);
+alter table buchungskreise add if not exists contact_name varchar(255);
+alter table buchungskreise add if not exists contact_phone varchar(255);
+alter table buchungskreise add if not exists contact_email varchar(255);
+alter table buchungskreise add if not exists iban  varchar(255);
